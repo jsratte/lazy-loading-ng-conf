@@ -11,6 +11,8 @@ import {HomeComponent} from "./home/home.component";
 import {FlightHistoryComponent} from "./flight-history/flight-history.component";
 import {BookingsComponent} from "./bookings/bookings.component";
 import {FlightBookingModule} from "./flight-booking/flight-booking.module";
+import {AuthService} from "./shared/auth/auth.service";
+import {SimpleAuthService} from "./shared/auth/simple-auth.service";
 
 @NgModule({
     imports: [
@@ -20,8 +22,7 @@ import {FlightBookingModule} from "./flight-booking/flight-booking.module";
         ReactiveFormsModule,
         SharedModule,
         AppRouterModule,
-        AuthModule.forRoot()
-        // FlightBookingModule  
+        FlightBookingModule
     ],
     declarations: [
         AppComponent,
@@ -30,7 +31,8 @@ import {FlightBookingModule} from "./flight-booking/flight-booking.module";
         FlightHistoryComponent
     ],
     providers: [
-        { provide: BASE_URL, useValue: "http://www.angular.at"}
+        { provide: BASE_URL, useValue: "http://www.angular.at"},
+        { provide: AuthService, useClass: SimpleAuthService },
     ],
     bootstrap: [
         AppComponent

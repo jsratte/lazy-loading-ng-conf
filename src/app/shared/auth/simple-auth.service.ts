@@ -7,7 +7,7 @@ export class SimpleAuthService implements AuthService {
     private _userName = "";
 
     public login(): void {
-        this._userName = "Max";
+        this._userName = "Jean-Simon";
     }
 
     public logout(): void {
@@ -21,5 +21,4 @@ export class SimpleAuthService implements AuthService {
     public get userName(): string {
         return this._userName;
     }
-
 }

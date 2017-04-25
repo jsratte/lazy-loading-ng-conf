@@ -6,14 +6,12 @@ import { AuthService } from "app/shared/auth/auth.service";
 
 
 @NgModule({
-    imports: [ /* Other nifty modules */ ],
+    imports: [],
     exports: [],
-    declarations: [/* Login-Component, Logoff-component, UserInfoComponent, UserStatusComp */],
-    providers: [
-        
-    ],
+    declarations: [],
+    providers: [],
 })
-export class AuthModule { 
+export class AuthModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: AuthModule,
@@ -22,5 +20,4 @@ export class AuthModule {
             ]
         }
     }
-
 }

@@ -23,7 +23,7 @@ let APP_ROUTES: Routes = [
     },
     {
         path: 'flight-booking',
-        loadChildren: './flight-booking/flight-booking.module#FlightBookingModule'
+        component: FlightBookingComponent
     },
     {
         path: 'history',
@@ -37,11 +37,7 @@ let APP_ROUTES: Routes = [
     }
 ];
 
-export let AppRouterModule = 
-            RouterModule.forRoot(
-                APP_ROUTES, {
-                    preloadingStrategy: PreloadAllModules
-                });
+export let AppRouterModule = RouterModule.forRoot(APP_ROUTES);
 
 
 
